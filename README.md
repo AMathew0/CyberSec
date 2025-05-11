@@ -33,7 +33,7 @@ This site is hosted using **GitHub Pages** and serves as a hub for my work, lear
 
 ## 📌 Live Site
 
-🌍 **[cloudsecengineer.github.io](https://cloudsecengineer.github.io)**
+🌍 **[CloudSecEngineer](https://amathew0.github.io/CyberSec)**
 
 ---
 
@@ -52,7 +52,7 @@ This site is hosted using **GitHub Pages** and serves as a hub for my work, lear
 
 🧑‍💼 LinkedIn: [linkedin.com/in/Ajeesh Mathai](http://www.linkedin.com/in/ajeesh3-mathai)
 
-💻 GitHub: [github.com/CloudSecEngineer](https://cloudsecengineer.github.io)
+💻 GitHub: [github.com/CloudSecEngineer](https://amathew0.github.io/CyberSec)
 
 📫 Email: amathai.prof@outlook.com
 
