@@ -33,7 +33,7 @@ This site is hosted using **GitHub Pages** and serves as a hub for my work, lear
 
 ## 📌 Live Site
 
-🌍 **[CloudSecEngineer(https://amathew0.github.io/CyberSec)**
+🌍 **[CloudSecEngineer](https://amathew0.github.io/CyberSec)**
 
 ---
 
