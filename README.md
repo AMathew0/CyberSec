@@ -66,7 +66,7 @@ Markdown for documentation
 
 Open-source tools for labs and testing
 
-#🙏 Acknowledgments
+# 🙏 Acknowledgments
 
 Thanks to the open-source community and cybersecurity researchers who share their knowledge and tools — this project builds on that foundation.
 
