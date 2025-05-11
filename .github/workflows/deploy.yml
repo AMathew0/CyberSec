@@ -1,39 +1,20 @@
-name: Deploy to GitHub Pages
+name: Deploy static HTML to GitHub Pages
 
-# Trigger the workflow on push to the main branch
 on:
   push:
     branches:
-      - main  # Adjust this if you're using a different branch (like "master")
+      - main  # or master, if that's your default branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository's code
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js (needed for GitHub Pages deployment)
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      # Step 3: Install dependencies (if you are using a static site generator like Jekyll, you can skip this if not)
-      - name: Install dependencies
-        run: |
-          npm install
-
-      # Step 4: Build the site (again, skip this if you're just using static HTML)
-      - name: Build site
-        run: |
-          npm run build
-
-      # Step 5: Deploy the site to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Root directory for your portfolio files
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .  # This points to the root folder with your index.html
