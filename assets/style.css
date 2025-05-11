@@ -1,23 +1,47 @@
+/* assets/style.css */
 body {
-  font-family: sans-serif;
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  line-height: 1.6;
-  background: #fff;
-  color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-nav a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: #005f73;
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
-nav a:hover {
-  text-decoration: underline;
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-h1, h2 {
-  color: #0a0a0a;
+h2 {
+    color: #333;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
