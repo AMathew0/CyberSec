@@ -46,3 +46,28 @@ This site is hosted using **GitHub Pages** and serves as a hub for my work, lear
 ├── labs/                 # Step-by-step lab writeups
 ├── notes/                # Study notes in markdown or PDF
 └── README.md             # This file
+
+```
+# 🔗 Connect With Me
+
+🧑‍💼 LinkedIn: [linkedin.com/in/Ajeesh Mathai](http://www.linkedin.com/in/ajeesh3-mathai)
+
+💻 GitHub: [github.com/CloudSecEngineer](https://cloudsecengineer.github.io)
+
+📫 Email: amathai.prof@outlook.com
+
+# ⚡ Tech Stack
+
+HTML, CSS (Vanilla for now, planning to adopt Tailwind)
+
+GitHub Pages for hosting
+
+Markdown for documentation
+
+Open-source tools for labs and testing
+
+#🙏 Acknowledgments
+
+Thanks to the open-source community and cybersecurity researchers who share their knowledge and tools — this project builds on that foundation.
+
+🚀 Feel free to fork this portfolio or use ideas from it. Collaboration and feedback are always welcome!
