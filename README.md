@@ -1,4 +1,4 @@
-# 🌐 CloudSecEngineer - Portfolio Website
+# 🌐 CloudSecEngineer - Portfolio
 
 Welcome to my personal portfolio website! 
 
