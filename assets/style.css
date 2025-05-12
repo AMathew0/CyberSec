@@ -21,3 +21,9 @@ nav a:hover {
 h1, h2 {
   color: #0a0a0a;
 }
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
