@@ -1,3 +1,8 @@
+  ---
+  layout: default
+  title: "Security+ 1.0 Notes"
+  ---
+
 # Security+ 1.0 – Threats, Attacks, and Vulnerabilities
 
 | **Term** | **Definition + Example** |
