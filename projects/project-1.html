@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Hybrid-University-Infra-Design</title>
   <link rel="stylesheet" href="../assets/style.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -17,23 +21,181 @@
   <p><strong>Description:</strong><br>
      A test project demonstrating the design of a hybrid IT infrastructure for a university, combining cloud services (Microsoft 365 & AWS) with practical security, collaboration, and network planning.</p>
 
-  <p><strong>Technologies Used:</strong></p>
-<ul style="list-style: none; padding-left: 0;">
-  <li><i class="fab fa-microsoft"></i> Microsoft 365 (SharePoint, OneDrive, Exchange)</li>
-  <li><i class="fab fa-aws"></i> AWS (EC2, S3, VPC)</li>
-  <li><i class="fas fa-video"></i> Zoom</li>
-  <li><i class="fas fa-shield-alt"></i> FortiGate Firewall</li>
-  <li><i class="fas fa-network-wired"></i> VLAN Segmentation</li>
-  <li><i class="fab fa-github"></i> GitHub</li>
-  <li><i class="fas fa-robot"></i> Power Automate</li>
-</ul>
+ <!-- Toggle Button 
+ <button onclick="toggleTech()" style="background-color: #007acc; color: white; border: none; padding: 10px 16px; font-size: >
+  <i class="fas fa-tools"></i> Technologies Used
+ </button>
 
+<!-- Toggle Content
+<div id="tech-list" style="margin-top: 15px; display: none;">
+  <ul style="list-style: none; padding-left: 0; font-size: 16px; line-height: 1.8;">
+    <li><i class="fab fa-microsoft"></i>&nbsp; Microsoft 365 (SharePoint, OneDrive, Exchange)</li>
+    <li><i class="fab fa-aws"></i>&nbsp; AWS (EC2, S3, VPC)</li>
+    <li><i class="fas fa-video"></i>&nbsp; Zoom</li>
+    <li><i class="fas fa-shield-alt"></i>&nbsp; FortiGate Firewall</li>
+    <li><i class="fas fa-network-wired"></i>&nbsp; VLAN Segmentation</li>
+    <li><i class="fab fa-github"></i>&nbsp; GitHub</li>
+    <li><i class="fas fa-robot"></i>&nbsp; Power Automate</li>
+  </ul>
+</div>
+<!-- JavaScript 
+
+
+<script>
+function toggleTech() {
+  const section = document.getElementById("tech-list");
+  section.style.display = (section.style.display === "none") ? "block" : "none";
+}
+</script>
+-->
   <p><strong>Objective:</strong><br>
      To architect a decentralized, secure, and scalable hybrid IT infrastructure that supports both educational and software development workflows across two subdomains of a university.</p>
 
   <p><strong>Outcome:</strong><br>
      Delivered a complete infrastructure design blueprint, integrating Microsoft cloud services with AWS, implementing basic security practices, and enabling file sharing, collaboration, and automation within a hybrid cloud environment.</p>
+  <section>
+  <h2>🧰 Technologies Used</h2>
 
+  <details open>
+    <summary>🌐 Network & Connectivity</summary>
+    <ul>
+      <li><strong>Firewalls:</strong> FortiGate 200D (HQ), FortiGate 100D (branches)</li>
+      <li><strong>Switches:</strong> Cisco SG500-28P (core), Cisco SG300-52 (edge)</li>
+      <li><strong>Wi-Fi:</strong> UniFi 6 Professional</li>
+      <li><strong>Routers/Gateway:</strong> GPON H660GM-A, Archer C6</li>
+      <li><strong>Topology:</strong> VLAN segmentation (Staff, Student, Guest, Printer), Inter-VLAN Routing, NAT</li>
+      <li><strong>DNS/DHCP:</strong> Windows Server 2019 (AD DNS, DHCP Failover)</li>
+      <li><strong>VPN:</strong> FortiClient VPN</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>☁️ Cloud Platform Usage</summary>
+    <ul>
+      <li><strong>AWS:</strong> EC2, S3, RDS (PostgreSQL), Route 53</li>
+      <li><strong>Azure:</strong> Azure AD, Microsoft 365, Intune, Azure Backup</li>
+      <li><strong>GCP:</strong> Firebase, Google BigQuery (optional)</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🖥️ On-Premises Systems</summary>
+    <ul>
+      <li><strong>Domain Services:</strong> Windows Server 2019 (AD DS, DNS, DHCP)</li>
+      <li><strong>File & Print:</strong> Windows Server 2019 with DFS + Quotas</li>
+      <li><strong>Linux Servers:</strong> Ubuntu Server 22.04 LTS</li>
+      <li><strong>Hypervisor:</strong> Proxmox VE 8.1</li>
+      <li><strong>Storage:</strong> TrueNAS CORE (ZFS)</li>
+      <li><strong>Patch Mgmt:</strong> WSUS, PDQ Deploy</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🛡️ Security & Endpoint Protection</summary>
+    <ul>
+      <li><strong>Antivirus/EDR:</strong> Microsoft Defender for Endpoint</li>
+      <li><strong>Encryption:</strong> BitLocker, LUKS</li>
+      <li><strong>Web Protection:</strong> FortiGuard DNS filtering</li>
+      <li><strong>DLP & Email Sec:</strong> Microsoft Purview, Defender for Office 365</li>
+      <li><strong>SSL/DNS Security:</strong> Let’s Encrypt, Cloudflare</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>💻 Endpoint & Device Management</summary>
+    <ul>
+      <li><strong>Windows:</strong> Microsoft Intune</li>
+      <li><strong>Inventory:</strong> GLPI + FusionInventory</li>
+      <li><strong>Remote Support:</strong> AnyDesk, RustDesk</li>
+      <li><strong>Mac/Linux:</strong> Munki, Ansible, Cockpit</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>💾 Backup & Disaster Recovery</summary>
+    <ul>
+      <li><strong>VM Backup:</strong> Veeam Community Edition</li>
+      <li><strong>File Backup:</strong> Rsync, Rclone (AWS S3)</li>
+      <li><strong>Cloud-native:</strong> AWS Backup, Azure Backup</li>
+      <li><strong>DR Site:</strong> Proxmox Cold Standby + S3</li>
+      <li><strong>RTO/RPO:</strong> RTO: 4h, RPO: 1h</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>📈 Monitoring, Logging & Alerts</summary>
+    <ul>
+      <li><strong>Monitoring:</strong> Zabbix 6.4 LTS, AWS CloudWatch</li>
+      <li><strong>Dashboards:</strong> Grafana + Prometheus</li>
+      <li><strong>Logs:</strong> Graylog 5</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🗃️ Internal Core Applications</summary>
+    <ul>
+      <li><strong>LMS:</strong> Moodle 4.3</li>
+      <li><strong>File Collaboration:</strong> SharePoint Online, OneDrive</li>
+      <li><strong>Intranet Wiki:</strong> BookStack</li>
+      <li><strong>VC & Mail:</strong> Zoom Business, Exchange Online</li>
+      <li><strong>Git:</strong> Gitea (self-hosted), GitHub EDU</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🧪 Application Stack for Dev / Students</summary>
+    <ul>
+      <li><strong>Frontend:</strong> React.js, TailwindCSS</li>
+      <li><strong>Backend:</strong> Django, Node.js</li>
+      <li><strong>Database:</strong> PostgreSQL 15</li>
+      <li><strong>Containers:</strong> Docker + Compose</li>
+      <li><strong>CI/CD:</strong> GitHub Actions, Jenkins (optional)</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🧑‍💻 Identity & Access</summary>
+    <ul>
+      <li><strong>Primary Auth:</strong> Windows AD (sync to Azure AD)</li>
+      <li><strong>Cloud Auth:</strong> Azure AD (SSO)</li>
+      <li><strong>Federation:</strong> Google Workspace (optional)</li>
+      <li><strong>2FA:</strong> Microsoft/Google Authenticator</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🧰 Automation & Config Mgmt</summary>
+    <ul>
+      <li><strong>IAC:</strong> Terraform 1.6</li>
+      <li><strong>Config Mgmt:</strong> Ansible 8.5</li>
+      <li><strong>Scripting:</strong> PowerShell 7, Bash</li>
+      <li><strong>Scheduling:</strong> Systemd timers, Task Scheduler</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🏢 Data Center & Physical Setup</summary>
+    <ul>
+      <li><strong>Rack & Power:</strong> 42U Rack, PDU, UPS (APC 2kVA)</li>
+      <li><strong>Cooling:</strong> Temp Sensors, AC</li>
+      <li><strong>Layout:</strong> Switch > Router > Firewall > NAS > Server</li>
+      <li><strong>Patch Panels:</strong> Color-coded, labeled</li>
+      <li><strong>Access:</strong> RFID lock, CCTV</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>📚 Documentation & ITSM</summary>
+    <ul>
+      <li><strong>Docs/KB:</strong> MkDocs</li>
+      <li><strong>Diagrams:</strong> Draw.io</li>
+      <li><strong>Ticketing:</strong> GLPI, Freshservice</li>
+      <li><strong>Policies:</strong> Markdown repo (GitHub)</li>
+    </ul>
+  </details>
+
+</section>
+  
   <p><strong>Skills Gained:</strong><br>
      Infrastructure planning, hybrid cloud design, Microsoft 365 administration, AWS architecture fundamentals, network segmentation, firewall planning, IT documentation, and collaboration system design.</p>
 </div>
