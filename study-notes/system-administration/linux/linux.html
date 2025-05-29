@@ -1,24 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Linux Cheatsheet | Ajeesh Mathai</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ajeesh Mathai | Linux Administration Notes </title>
   <link rel="stylesheet" href="https://amathew0.github.io/CyberSec/assets/style.css" target="_blank">
 </head>
 <body>
   <header>
-    <h1>Linux Cheatsheets</h1>
-  </header>
-
+    <h1> Linux Administration </h1>
+     <p>This section will showcase all linux related administration notes and resources.</p>
   <main>
-    <p>This section will showcase all linux related cheatsheet.</p>
-     <ul>
-      <li><a href="https://github.com/AMathew0/linux-commands-cheatsheet">Linux Cheatsheet </a> – Here</li>
-    </ul>
-  </main>
+    <!-- Toggle Section View -->
+	<div>
+	<details open>
+		<summary>🌐 Linux Foundation - (LFS101) - Notes </summary>
+		<p> 
+		This is a comprehensive summary of the core concepts from the Linux Foundation - (LFS101) exam. This section includes embedded slides and a detailed breakdown of key topics such as Linux History, Linux architecture, Linux management, and security. Ideal for beginners preparing for Linux Foundation - (LFS101) certification or anyone looking to understand the basics of Linux Fundamental.
+		</p>
+	<h4>🐧 Linux Fundamentals & System Architecture</h4>
 
+<h5>📘 1. Introduction to Linux</h5>
+<ul>
+  <li>History and philosophy of Linux and open source</li>
+  <li>Common distributions and their package managers (RPM/DEB)</li>
+  <li>Kernel vs. user space</li>
+</ul>
+
+<h5>📁 1.2. Linux Filesystem Hierarchy</h5>
+<ul>
+  <li>Understanding of <code>/</code>, <code>/home</code>, <code>/etc</code>, <code>/var</code>, <code>/tmp</code>, <code>/usr</code>, <code>/bin</code>, <code>/sbin</code></li>
+  <li>Navigating directories using <code>cd</code>, <code>ls</code>, <code>pwd</code>, <code>find</code>, and <code>locate</code></li>
+</ul>
+
+<h5>💻 2. Command Line Skills</h5>
+
+<h6>2.1. Shell and Terminal Usage</h6>
+<ul>
+  <li>Understanding bash and shell environments</li>
+  <li>Command structure and usage of options/arguments</li>
+  <li>Input/output redirection (<code>&gt;</code>, <code>&gt;&gt;</code>, <code>&lt;</code>, <code>|</code>)</li>
+  <li>Command substitution and quoting</li>
+</ul>
+
+<h6>2.2. File Management</h6>
+<ul>
+  <li>File and directory operations: <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>mkdir</code>, <code>rmdir</code>, <code>touch</code></li>
+  <li>File permissions: <code>chmod</code>, <code>chown</code>, <code>umask</code>, symbolic vs. numeric</li>
+  <li>Links: hard vs. symbolic links</li>
+</ul>
+
+<h6>2.3. Text Processing Tools</h6>
+<ul>
+  <li><code>cat</code>, <code>head</code>, <code>tail</code>, <code>less</code>, <code>more</code></li>
+  <li><code>grep</code>, <code>cut</code>, <code>awk</code>, <code>sed</code>, <code>sort</code>, <code>uniq</code>, <code>wc</code></li>
+</ul>
+
+<h5>👥 3. Users and Permissions</h5>
+
+<h6>3.1. User and Group Management</h6>
+<ul>
+  <li>Create, modify, delete users and groups</li>
+  <li>Understanding <code>/etc/passwd</code>, <code>/etc/shadow</code>, <code>/etc/group</code></li>
+  <li>Use of <code>useradd</code>, <code>usermod</code>, <code>groupadd</code>, <code>passwd</code>, <code>who</code>, <code>id</code>, <code>su</code>, <code>sudo</code></li>
+</ul>
+
+<h6>3.2. File Permissions and Ownership</h6>
+<ul>
+  <li>Reading file permission notation</li>
+  <li>Modifying permissions for user, group, others</li>
+  <li>Understanding SUID, SGID, sticky bit</li>
+</ul>
+
+<h5>⚙️ 4. System Services and Processes</h5>
+
+<h6>4.1. Process Management</h6>
+<ul>
+  <li>Understanding foreground/background jobs</li>
+  <li>Using <code>ps</code>, <code>top</code>, <code>htop</code>, <code>kill</code>, <code>nice</code>, <code>renice</code>, <code>jobs</code>, <code>fg</code>, <code>bg</code></li>
+</ul>
+
+<h6>4.2. System Logging</h6>
+<ul>
+  <li>Understanding log files in <code>/var/log/</code></li>
+  <li>Use of <code>dmesg</code>, <code>journalctl</code>, <code>logger</code></li>
+</ul>
+
+<h6>4.3. Service Management (init/systemd)</h6>
+<ul>
+  <li>Starting, stopping, restarting services</li>
+  <li>Enabling/disabling at boot</li>
+  <li>Checking status: <code>systemctl</code>, <code>service</code>, <code>init.d</code></li>
+</ul>
+
+<h5>📦 5. Package Management</h5>
+
+<h6>5.1. RPM-based Systems</h6>
+<ul>
+  <li>Use of <code>yum</code>, <code>dnf</code>, <code>rpm</code></li>
+</ul>
+
+<h6>5.2. DEB-based Systems</h6>
+<ul>
+  <li>Use of <code>apt</code>, <code>dpkg</code></li>
+</ul>
+
+<h6>5.3. General Concepts</h6>
+<ul>
+  <li>Installing, updating, removing packages</li>
+  <li>Managing repositories</li>
+</ul>
+
+<h5>🌐 6. Networking and Security</h5>
+
+<h6>6.1. Basic Networking</h6>
+<ul>
+  <li>Network configuration files</li>
+  <li>Use of <code>ip</code>, <code>ifconfig</code>, <code>ping</code>, <code>netstat</code>, <code>ss</code>, <code>traceroute</code>, <code>dig</code>, <code>nslookup</code></li>
+</ul>
+
+<h6>6.2. Secure Shell (SSH)</h6>
+<ul>
+  <li>Using <code>ssh</code>, <code>scp</code>, <code>rsync</code></li>
+  <li>Generating and managing SSH keys</li>
+  <li>Remote login and file transfer</li>
+</ul>
+
+<h6>6.3. Firewall and Security Basics</h6>
+<ul>
+  <li>Basic concepts of firewalls (<code>iptables</code>, <code>ufw</code>)</li>
+  <li>File integrity and audit (<code>auditd</code>)</li>
+  <li>Setting up simple access control</li>
+</ul>
+
+<h5>💾 7. Storage and Filesystems</h5>
+
+<h6>7.1. Disk and Filesystem Management</h6>
+<ul>
+  <li>Partitioning with <code>fdisk</code>, <code>parted</code></li>
+  <li>Formatting with <code>mkfs</code></li>
+  <li>Mounting and unmounting devices (<code>mount</code>, <code>umount</code>)</li>
+  <li><code>fstab</code> configuration</li>
+</ul>
+
+<h6>7.2. Filesystem Maintenance</h6>
+<ul>
+  <li>Checking disk usage: <code>df</code>, <code>du</code></li>
+  <li>Checking and repairing file systems: <code>fsck</code>, <code>tune2fs</code></li>
+</ul>
+
+<h5>⚡ 8. Scripting and Automation</h5>
+
+<h6>8.1. Shell Scripting Basics</h6>
+<ul>
+  <li>Writing basic bash scripts</li>
+  <li>Variables, conditionals, loops</li>
+  <li>Executing and debugging scripts</li>
+</ul>
+
+<h6>8.2. Cron and Scheduled Tasks</h6>
+<ul>
+  <li>Creating cron jobs using <code>crontab</code></li>
+  <li>Using <code>at</code> and <code>anacron</code></li>
+  <li>Understanding cron syntax</li>
+</ul>
+
+<h5>🔄 9. System Boot and Runlevels</h5>
+
+<h6>9.1. Boot Process</h6>
+<ul>
+  <li>BIOS to bootloader (GRUB)</li>
+  <li>Kernel loading and init/systemd</li>
+  <li>Troubleshooting boot issues</li>
+</ul>
+
+<h6>9.2. Runlevels and Targets</h6>
+<ul>
+  <li>Understanding systemd targets</li>
+  <li>Switching targets with <code>systemctl isolate</code></li>
+</ul>
+
+<h5>🔍 10. Troubleshooting and Diagnostics</h5>
+
+<h6>10.1. System Monitoring</h6>
+<ul>
+  <li>Monitoring CPU, memory, disk, and processes</li>
+  <li>Identifying performance bottlenecks</li>
+</ul>
+
+<h6>10.2. Log Analysis</h6>
+<ul>
+  <li>Understanding and analyzing system logs</li>
+  <li>Troubleshooting common issues (boot, network, service)</li>
+</ul>
+	</div>
+	<!-- Embedded Google Docs -->
+	<div>
+			<a href="https://docs.google.com/presentation/d/1CUojTRVt2SA3EGq2Vyf7sGomYmXLpo16RsgGaaOhroQ/preview" target="_blank"> ✅ Linux Foundation - (LFS101) - Notes</a>
+	</div>
+	<div>
+			<a href="https://docs.google.com/spreadsheets/d/1Vpl3M-AvzK_7K22fbbsx34NgveGkTrTm/preview" target="_blank"> ✅ Linux Foundation - (LFS101) - Core Concepts </a>
+	</div>
+	</details>
+	</main>
   <footer>
-    <p>&copy; 2025 Ajeesh Mathai | <a href=""https://amathew0.github.io/CyberSec/index.html" target="_blank"">Back to Home</a></p>
+         <p>&copy; 2025 Ajeesh Mathai| <a href="https://amathew0.github.io/CyberSec/index.html">Back to Home</a></p>
   </footer>
 </body>
 </html>
