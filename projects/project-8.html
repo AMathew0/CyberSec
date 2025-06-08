@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AWS Bastion Host & VPN Configuration</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>AWS Bastion Host & VPN Configuration</h1>
+  </header>
+
+<main>
+
+  <details open>
+    <summary><strong>✅ Bastion Host Setup (AWS)</strong> – Implemented secure access architecture for EC2 instances in private subnets.</summary>
+
+    <p><strong>Objective:</strong></p>
+    <p>Deploy a secure access mechanism using a Bastion Host to enable controlled SSH access to EC2 instances and RDS in private subnets within AWS.</p>
+
+    <p><strong>Summary:</strong></p>
+    <ul>
+      <li>Configured a Bastion Host in a public subnet to provide SSH access to resources within private subnets.</li>
+      <li>Enabled developers to access RDS instances securely without exposing the database to the internet.</li>
+      <li>Restricted inbound access to the Bastion Host using security groups and IP whitelisting.</li>
+      <li>Configured SSH Agent Forwarding and Identity files to allow secure hop-through connections.</li>
+      <li>Monitored and logged session activity using AWS CloudTrail and system logs.</li>
+    </ul>
+
+    <p><strong>Key Highlights:</strong></p>
+    <ul>
+      <li>Reduced attack surface by avoiding direct exposure of RDS or EC2 to the internet</li>
+      <li>Implemented least-privilege access for developers</li>
+      <li>Ensured secure troubleshooting and database-level access via bastion tunnel</li>
+    </ul>
+
+    <div class="skills">
+      <strong>Skills Demonstrated:</strong> Bastion Host | AWS EC2 | Private Subnet Access | RDS Security | SSH Tunneling | Network Isolation | Cloud Security
+    </div>
+
+    <p><strong>Lab Status:</strong> Completed</p>
+  </details>
+
+  <details>
+    <summary><strong>✅ AWS VPN Setup on EC2</strong> – Provided continuous terminal access for trainers using Ubuntu-based VPN server on AWS.</summary>
+
+    <p><strong>Objective:</strong></p>
+    <p>Provide continuous, secure terminal access for trainers by setting up a VPN server on an AWS EC2 instance, enabling remote Ubuntu-based training environments.</p>
+
+    <p><strong>Summary:</strong></p>
+    <ul>
+      <li>Configured an OpenVPN server on a dedicated EC2 instance running Ubuntu in a public subnet.</li>
+      <li>Allowed authorized trainers to securely connect to internal lab environments for hands-on terminal sessions.</li>
+      <li>Enabled persistent VPN tunnels to maintain session continuity during training.</li>
+      <li>Used static IP assignment and routing rules to grant access to specific training resources.</li>
+      <li>Secured the VPN server with UFW rules, SSL certificates, and user authentication.</li>
+    </ul>
+
+    <p><strong>Key Highlights:</strong></p>
+    <ul>
+      <li>Deployed self-managed VPN on EC2 without third-party services</li>
+      <li>Maintained consistent remote access for multiple training sessions</li>
+      <li>Isolated trainer sessions from production infrastructure using routing rules</li>
+    </ul>
+
+    <div class="skills">
+      <strong>Skills Demonstrated:</strong> AWS EC2 | OpenVPN | Ubuntu Server | Secure Remote Access | UFW | SSH | Network Routing | Training Environment Setup
+    </div>
+
+    <p><strong>Lab Status:</strong> Completed</p>
+  </details>
+
+</main>
+
+  <footer>
+    <p><a href="index.html">Back to Projects</a></p>
+  </footer>
+</body>
+</html>

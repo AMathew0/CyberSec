@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blue-Green RDS Migration (AWS) </title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>Project: Blue-Green RDS Migration (AWS)</h1>
+  </header>
+
+  <main>
+
+  <p><strong>Objective:</strong></p>
+  <p>Perform a major version upgrade of a production RDS database (from MySQL 5.7 to 8.0) with zero downtime using a blue-green deployment strategy in AWS.</p>
+
+  <p><strong>Summary:</strong></p>
+  <ul>
+    <li>Web application hosted on AWS PaaS using a single RDS instance running MySQL 5.7 (extended support).</li>
+    <li>Designed a blue-green migration plan to simulate and validate the upgrade before switching live traffic.</li>
+    <li>Created a green RDS instance with MySQL 8.0, restored from a snapshot of the blue (existing) production DB.</li>
+    <li>Tested the application against the green environment and validated query compatibility, latency, and performance.</li>
+    <li>Performed DNS switch to redirect traffic after successful validation.</li>
+  </ul>
+
+  <p><strong>Key Highlights:</strong></p>
+  <ul>
+    <li>Used RDS snapshots to build a rollback path in case of failure</li>
+    <li>Achieved zero downtime without a Multi-AZ setup</li>
+    <li>Monitored performance pre/post-migration using Amazon CloudWatch</li>
+  </ul>
+
+  <div class="skills">
+    <strong>Skills Demonstrated:</strong> AWS RDS | MySQL | Blue-Green Deployment | CloudWatch | DNS Failover | Zero-Downtime Upgrade | PaaS Architecture
+  </div>
+
+  <p><strong>Lab Status:</strong> Completed</p>
+</main>
+
+  <footer>
+    <p><a href="index.html">Back to Projects</a></p>
+  </footer>
+</body>
+</html>
