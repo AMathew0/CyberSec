@@ -2,71 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resume | Ajeesh Mathai</title>
   <link rel="stylesheet" href="../assets/style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f3f3f3;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-    }
-    main {
-      width: 90%;
-      max-width: 900px;
-      margin: 20px auto;
-    }
-    details {
-      margin: 15px 0;
-      border-radius: 6px;
-      background: #fff;
-      padding: 10px 15px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    summary {
-      cursor: pointer;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .content-box {
-      background: #fff;
-      margin-top: 10px;
-      padding: 15px 20px;
-      border-radius: 6px;
-    }
-    h2 {
-      font-size: 20px;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-    h3 {
-      font-size: 16px;
-      margin-top: 15px;
-      margin-bottom: 5px;
-    }
-    ul {
-      padding-left: 20px;
-      margin-top: 5px;
-    }
-    a {
-      color: #003366;
-      text-decoration: none;
-    }
-  </style>
 </head>
 <body>
-
+<style>
+    footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #53a2f2;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+</style>
 <header>
   <h1>Resume</h1>
 </header>
 
 <main>
   <p>This section showcases my CV, interests, and experience.</p>
-
   <!-- Overview -->
   <details>
     <summary>Overview</summary>
@@ -330,11 +289,33 @@
   </details>
 
 </main>
-  
 <footer>
+  <span>Page Views: <span id="viewCount">0</span></span> |
+  <span>Current Time: <span id="currentTime">--:--:--</span></span> |
+  <span>Last Visit: <span id="lastVisit">N/A</span></span>
          <p>&copy; 2025 Ajeesh Mathai| <a href="https://amathew0.github.io/CyberSec/index.html">Back to Home</a></p>
-  </footer>
+</footer>
+<script>
+  // === Page View Tracking ===
+  let views = localStorage.getItem('pageViews') || 0;
+  views = parseInt(views) + 1;
+  localStorage.setItem('pageViews', views);
+  document.getElementById('viewCount').innerText = views;
+
+  // === Last Visit Tracking ===
+  const lastVisit = localStorage.getItem('lastVisit');
+  document.getElementById('lastVisit').innerText = lastVisit ? lastVisit : 'First visit';
+  const now = new Date();
+  localStorage.setItem('lastVisit', now.toLocaleString());
+
+  // === Current Time Update ===
+  function updateTime() {
+    const current = new Date();
+    document.getElementById('currentTime').innerText = current.toLocaleTimeString();
+  }
+  setInterval(updateTime, 1000); // update every second
+  updateTime(); // initial call
+</script>
 
 </body>
 </html>
-
